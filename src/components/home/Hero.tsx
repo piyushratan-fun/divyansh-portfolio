@@ -75,9 +75,9 @@ export function Hero() {
       {/* Background Big Monogram Letter D */}
       <motion.div
         aria-hidden="true"
-        className="absolute top-[8%] right-[16%] z-0 select-none font-display font-bold leading-none text-foreground/[0.18] pointer-events-none"
+        className="absolute top-[8%] right-[18%] sm:right-[20%] z-0 select-none font-display font-bold leading-none text-foreground/[0.16] pointer-events-none"
         style={{
-          fontSize: "clamp(200px, 35vw, 500px)",
+          fontSize: "clamp(160px, 30vw, 460px)",
           x: useStaticMotion ? 0 : letterX,
           y: useStaticMotion ? 0 : y1,
         }}
@@ -88,9 +88,9 @@ export function Hero() {
       {/* Background Big Monogram Letter K */}
       <motion.div
         aria-hidden="true"
-        className="absolute top-[8%] right-[0%] z-0 select-none font-display font-bold leading-none text-foreground/[0.12] pointer-events-none"
+        className="absolute top-[8%] right-[2%] sm:right-[4%] z-0 select-none font-display font-bold leading-none text-foreground/[0.10] pointer-events-none"
         style={{
-          fontSize: "clamp(200px, 35vw, 500px)",
+          fontSize: "clamp(160px, 30vw, 460px)",
           x: useStaticMotion ? 0 : letterReverseX,
           y: useStaticMotion ? 0 : y1,
         }}
@@ -101,17 +101,17 @@ export function Hero() {
       {/* Innovation / Lightbulb Background Motif with "Student Inventor" Label */}
       <motion.div
         aria-hidden="true"
-        className="absolute left-[8%] md:left-[24%] top-[40%] md:top-[44%] -translate-y-1/2 z-0 select-none pointer-events-none flex flex-col items-center justify-center transform-gpu"
+        className="absolute left-[16%] sm:left-[22%] md:left-[24%] top-[40%] md:top-[44%] -translate-y-1/2 z-0 select-none pointer-events-none flex flex-col items-center justify-center transform-gpu"
         style={{
           x: useStaticMotion ? 0 : iconsX,
           y: useStaticMotion ? 0 : y1,
-          rotate: -10,
+          rotate: -8,
         }}
       >
         <div
           style={{
-            width: "clamp(140px, 19vw, 280px)",
-            height: "clamp(140px, 19vw, 280px)",
+            width: "clamp(130px, 18vw, 280px)",
+            height: "clamp(130px, 18vw, 280px)",
           }}
           className="relative flex items-center justify-center text-foreground/[0.14] md:text-foreground/[0.18]"
         >
@@ -121,9 +121,9 @@ export function Hero() {
           />
 
           {/* Sharp "Student Inventor" Badge directly on motif */}
-          <div className="absolute inset-x-[-15%] top-[54%] -translate-y-1/2 flex items-center justify-center">
-            <div className="border border-foreground/20 bg-background/95 px-3 py-1 shadow-xs backdrop-blur-xs">
-              <p className="font-display text-[10px] sm:text-xs font-bold uppercase tracking-[0.28em] text-foreground whitespace-nowrap">
+          <div className="absolute top-[54%] -translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center justify-center">
+            <div className="border border-foreground/20 bg-background/95 px-2.5 sm:px-3 py-0.5 sm:py-1 shadow-xs backdrop-blur-xs">
+              <p className="font-display text-[9px] sm:text-xs font-bold uppercase tracking-[0.16em] sm:tracking-[0.24em] text-foreground whitespace-nowrap">
                 Student Inventor • Applied PCB
               </p>
             </div>
@@ -150,23 +150,23 @@ export function Hero() {
         {/* DIVYANSH Text Header */}
         <motion.div
           data-mobile-static-motion="true"
-          className="absolute left-6 top-[8%] z-20 md:left-12"
+          className="absolute left-4 top-[8%] z-20 sm:left-8 md:left-12"
           initial={useStaticMotion ? false : { opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <h1
             className="font-display font-bold uppercase leading-none tracking-normal text-display-tone"
-            style={{ fontSize: "clamp(48px, 12vw, 240px)" }}
+            style={{ fontSize: "clamp(36px, 10.5vw, 220px)" }}
           >
             <RevealText text="DIVYANSH" split="chars" stagger={0.035} />
           </h1>
         </motion.div>
 
-        {/* Center-Right Divyansh Silhouette / Cutout ("Sliver") */}
+        {/* Center-Right Divyansh Silhouette Cutout */}
         <div
-          className="absolute left-[55%] top-[50%] z-10 -translate-x-[31%] -translate-y-[58%] pointer-events-none"
-          style={{ height: "clamp(340px, 84vh, 1280px)", width: "clamp(340px, 84vh, 1280px)" }}
+          className="absolute left-[54%] top-[48%] z-10 -translate-x-[30%] -translate-y-[52%] pointer-events-none"
+          style={{ height: "clamp(300px, 78vh, 1200px)", width: "clamp(300px, 78vh, 1200px)" }}
         >
           <motion.div
             data-mobile-static-motion="true"
@@ -185,7 +185,6 @@ export function Hero() {
               style={{
                 height: "100%",
                 width: "auto",
-                mixBlendMode: "multiply",
                 objectFit: "contain",
                 filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.12))",
               }}
@@ -196,7 +195,7 @@ export function Hero() {
         {/* KATIYAR Text Header */}
         <motion.div
           data-mobile-static-motion="true"
-          className="absolute bottom-[28%] right-6 z-20 text-right md:bottom-[26%] md:right-24"
+          className="absolute bottom-[24%] right-4 z-20 text-right sm:bottom-[25%] sm:right-10 md:bottom-[26%] md:right-24"
           initial={useStaticMotion ? false : { opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -204,7 +203,7 @@ export function Hero() {
         >
           <h1
             className="font-display font-bold uppercase tracking-normal text-display-tone"
-            style={{ fontSize: "clamp(50px, 9vw, 200px)" }}
+            style={{ fontSize: "clamp(40px, 8.5vw, 190px)" }}
           >
             <RevealText text="KATIYAR" split="chars" delay={0.2} stagger={0.04} />
           </h1>
@@ -213,17 +212,17 @@ export function Hero() {
         {/* Hero Bottom Controls & Details */}
         <motion.div
           data-mobile-static-motion="true"
-          className="absolute bottom-4 left-6 right-6 z-30 md:bottom-6 md:left-12 md:right-12"
+          className="absolute bottom-3 left-4 right-4 z-30 sm:bottom-5 sm:left-8 sm:right-8 md:bottom-6 md:left-12 md:right-12"
           initial={useStaticMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="flex w-full flex-row items-stretch justify-center gap-3 md:gap-[8vw] mb-4">
+          <div className="flex w-full flex-row items-center justify-center gap-2.5 sm:gap-4 md:gap-8 mb-3 sm:mb-4">
             <MagneticButton className="min-w-0 flex-1 sm:flex-none">
               <Button
                 asChild
                 size="hero"
-                className="premium-soft-hover w-full rounded-none font-bold uppercase tracking-[0.12em] sm:min-w-[14rem] sm:tracking-[0.24em]"
+                className="premium-soft-hover w-full rounded-none font-bold uppercase tracking-wider sm:min-w-[12rem] sm:max-w-[15rem] sm:tracking-[0.2em]"
               >
                 <a href="#about">About Divyansh</a>
               </Button>
@@ -234,27 +233,27 @@ export function Hero() {
                 asChild
                 variant="outline"
                 size="hero"
-                className="premium-soft-hover w-full rounded-none border-foreground font-bold uppercase tracking-[0.12em] hover:text-background sm:min-w-[18rem] sm:tracking-[0.18em]"
+                className="premium-soft-hover w-full rounded-none border-foreground font-bold uppercase tracking-wider hover:text-background sm:min-w-[13rem] sm:max-w-[16rem] sm:tracking-[0.16em]"
               >
                 <a href="#pcb-curriculum">Applied Disciplines</a>
               </Button>
             </MagneticButton>
           </div>
 
-          <div className="flex items-end justify-between gap-6 border-t border-foreground/10 pt-3 md:pt-4">
+          <div className="flex items-end justify-between gap-4 border-t border-foreground/10 pt-2.5 sm:pt-3 md:pt-4">
             <div>
-              <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              <p className="mb-0.5 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 Academic &amp; Practical Focus
               </p>
-              <p className="text-xs sm:text-sm font-medium uppercase tracking-wide text-foreground">
+              <p className="text-[11px] sm:text-xs md:text-sm font-medium uppercase tracking-wide text-foreground">
                 Biology • Innovation • Applied Tech
               </p>
             </div>
             <div className="text-right">
-              <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+              <p className="mb-0.5 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                 Academic Year
               </p>
-              <p className="text-xs sm:text-sm font-medium uppercase tracking-wide text-foreground">
+              <p className="text-[11px] sm:text-xs md:text-sm font-medium uppercase tracking-wide text-foreground">
                 Class 12 • 2026
               </p>
             </div>
