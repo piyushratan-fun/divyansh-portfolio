@@ -70,17 +70,18 @@ export function BrandLoader({ visible }: BrandLoaderProps) {
               transition: { duration: 0.35, ease: "easeIn" },
             }}
           >
-            {/* Only DK in the middle */}
-            <motion.div
-              className="select-none text-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <p className="font-display text-[clamp(100px,24vw,220px)] font-bold uppercase leading-none tracking-[-0.04em] text-white">
+            {/* Only DK in the middle — instant visibility, crisp styling */}
+            <div className="select-none text-center flex items-center justify-center">
+              <span
+                className="font-display font-bold uppercase leading-none text-white tracking-[-0.04em]"
+                style={{
+                  fontSize: "clamp(100px, 26vw, 220px)",
+                  display: "inline-block",
+                }}
+              >
                 {DIVYANSH_PROFILE.monogram}
-              </p>
-            </motion.div>
+              </span>
+            </div>
           </motion.div>
         </motion.div>
       ) : null}
