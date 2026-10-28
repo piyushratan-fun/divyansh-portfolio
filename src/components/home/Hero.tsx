@@ -68,16 +68,16 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden bg-background pt-20"
+      className="relative w-full h-[100svh] min-h-[580px] overflow-hidden bg-background"
       onPointerLeave={useStaticMotion ? undefined : resetHeroPointer}
       onPointerMove={useStaticMotion ? undefined : handleHeroPointerMove}
     >
       {/* Background Big Monogram Letter D */}
       <motion.div
         aria-hidden="true"
-        className="absolute top-[8%] right-[18%] sm:right-[20%] z-0 select-none font-display font-bold leading-none text-foreground/[0.16] pointer-events-none"
+        className="absolute top-[8%] right-[18%] sm:right-[20%] md:right-[22%] z-0 select-none font-display font-bold leading-none text-foreground/[0.16] pointer-events-none"
         style={{
-          fontSize: "clamp(160px, 30vw, 460px)",
+          fontSize: "clamp(140px, 28vw, 460px)",
           x: useStaticMotion ? 0 : letterX,
           y: useStaticMotion ? 0 : y1,
         }}
@@ -88,9 +88,9 @@ export function Hero() {
       {/* Background Big Monogram Letter K */}
       <motion.div
         aria-hidden="true"
-        className="absolute top-[8%] right-[2%] sm:right-[4%] z-0 select-none font-display font-bold leading-none text-foreground/[0.10] pointer-events-none"
+        className="absolute top-[8%] right-[3%] sm:right-[5%] md:right-[6%] z-0 select-none font-display font-bold leading-none text-foreground/[0.10] pointer-events-none"
         style={{
-          fontSize: "clamp(160px, 30vw, 460px)",
+          fontSize: "clamp(140px, 28vw, 460px)",
           x: useStaticMotion ? 0 : letterReverseX,
           y: useStaticMotion ? 0 : y1,
         }}
@@ -101,7 +101,7 @@ export function Hero() {
       {/* Innovation / Lightbulb Background Motif with "Student Inventor" Label */}
       <motion.div
         aria-hidden="true"
-        className="absolute left-[16%] sm:left-[22%] md:left-[24%] top-[40%] md:top-[44%] -translate-y-1/2 z-0 select-none pointer-events-none flex flex-col items-center justify-center transform-gpu"
+        className="absolute left-[18%] sm:left-[22%] md:left-[24%] top-[40%] md:top-[44%] -translate-y-1/2 z-0 select-none pointer-events-none flex flex-col items-center justify-center transform-gpu"
         style={{
           x: useStaticMotion ? 0 : iconsX,
           y: useStaticMotion ? 0 : y1,
@@ -146,11 +146,11 @@ export function Hero() {
         <Sparkles className="floating-icon top-[50%] right-[5%] text-amber-400/25" />
       </motion.div>
 
-      <div className="relative z-10 mx-auto min-h-[100svh] w-full max-w-[1600px] px-6 md:h-screen md:px-12">
+      <div className="relative z-10 mx-auto h-full w-full max-w-[1600px] px-4 sm:px-8 md:px-12">
         {/* DIVYANSH Text Header */}
         <motion.div
           data-mobile-static-motion="true"
-          className="absolute left-4 top-[8%] z-20 sm:left-8 md:left-12"
+          className="absolute left-4 top-[12%] z-20 sm:left-8 sm:top-[10%] md:left-12 md:top-[10%]"
           initial={useStaticMotion ? false : { opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -166,7 +166,7 @@ export function Hero() {
         {/* Center-Right Divyansh Silhouette Cutout */}
         <div
           className="absolute left-[54%] top-[48%] z-10 -translate-x-[30%] -translate-y-[52%] pointer-events-none"
-          style={{ height: "clamp(300px, 78vh, 1200px)", width: "clamp(300px, 78vh, 1200px)" }}
+          style={{ height: "clamp(300px, 76vh, 1200px)", width: "clamp(300px, 76vh, 1200px)" }}
         >
           <motion.div
             data-mobile-static-motion="true"
@@ -195,7 +195,7 @@ export function Hero() {
         {/* KATIYAR Text Header */}
         <motion.div
           data-mobile-static-motion="true"
-          className="absolute bottom-[24%] right-4 z-20 text-right sm:bottom-[25%] sm:right-10 md:bottom-[26%] md:right-24"
+          className="absolute bottom-[20%] right-4 z-20 text-right sm:bottom-[22%] sm:right-10 md:bottom-[24%] md:right-24"
           initial={useStaticMotion ? false : { opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
@@ -212,7 +212,7 @@ export function Hero() {
         {/* Hero Bottom Controls & Details */}
         <motion.div
           data-mobile-static-motion="true"
-          className="absolute bottom-3 left-4 right-4 z-30 sm:bottom-5 sm:left-8 sm:right-8 md:bottom-6 md:left-12 md:right-12"
+          className="absolute bottom-3 left-4 right-4 z-30 sm:bottom-4 sm:left-8 sm:right-8 md:bottom-5 md:left-12 md:right-12"
           initial={useStaticMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
