@@ -8,7 +8,7 @@ type BrandLoaderProps = {
   visible: boolean;
 };
 
-// Precise cubic-bezier curve for cinematic split opening
+// Cinematic split-opening bezier curve
 const splitEase = [0.77, 0, 0.175, 1] as const;
 
 export function BrandLoader({ visible }: BrandLoaderProps) {
@@ -20,58 +20,23 @@ export function BrandLoader({ visible }: BrandLoaderProps) {
           className="brand-loader-overlay fixed inset-0 z-[200] pointer-events-auto select-none overflow-hidden"
           initial={{ opacity: 1 }}
           exit={{
-            opacity: 0,
+            opacity: 1,
             pointerEvents: "none",
-            transition: { duration: 0.8, ease: splitEase },
+            transition: { duration: 0.9, delay: 0.05 },
           }}
         >
-          {/* Top Half Split Shutter (Slides UP on Exit) */}
+          {/* Top Half Split Shutter (Slides UP on Exit, carrying the TOP HALF of DK) */}
           <motion.div
             key="shutter-top"
-            className="absolute top-0 inset-x-0 h-1/2 bg-[#090909] border-b border-white/10 z-10"
+            className="absolute top-0 inset-x-0 h-1/2 overflow-hidden bg-[#090909] border-b border-primary/40 z-20"
             initial={{ y: 0 }}
             exit={{
               y: "-100%",
-              transition: { duration: 0.75, ease: splitEase },
-            }}
-          />
-
-          {/* Bottom Half Split Shutter (Slides DOWN on Exit) */}
-          <motion.div
-            key="shutter-bottom"
-            className="absolute bottom-0 inset-x-0 h-1/2 bg-[#090909] border-t border-white/10 z-10"
-            initial={{ y: 0 }}
-            exit={{
-              y: "100%",
-              transition: { duration: 0.75, ease: splitEase },
-            }}
-          />
-
-          {/* Center Dividing Split Line Accent */}
-          <motion.div
-            key="shutter-center-line"
-            className="absolute top-1/2 inset-x-0 h-px bg-primary/40 -translate-y-1/2 z-20 pointer-events-none"
-            initial={{ opacity: 1, scaleX: 1 }}
-            exit={{
-              opacity: 0,
-              scaleX: 0,
-              transition: { duration: 0.25, ease: "easeOut" },
-            }}
-          />
-
-          {/* Foreground Content Container (Fades out cleanly right before shutters split) */}
-          <motion.div
-            key="loader-content"
-            className="relative z-30 flex h-full w-full items-center justify-center text-white"
-            initial={{ opacity: 1 }}
-            exit={{
-              opacity: 0,
-              scale: 0.96,
-              transition: { duration: 0.35, ease: "easeIn" },
+              transition: { duration: 0.85, ease: splitEase },
             }}
           >
-            {/* Only DK in the middle — instant visibility, crisp styling */}
-            <div className="select-none text-center flex items-center justify-center">
+            {/* Top inner container: 200% height anchored to top: 0, DK is centered at bottom edge (50% of screen) */}
+            <div className="absolute top-0 inset-x-0 h-[200%] w-full flex items-center justify-center pointer-events-none select-none">
               <span
                 className="font-display font-bold uppercase leading-none text-white tracking-[-0.04em]"
                 style={{
@@ -83,6 +48,42 @@ export function BrandLoader({ visible }: BrandLoaderProps) {
               </span>
             </div>
           </motion.div>
+
+          {/* Bottom Half Split Shutter (Slides DOWN on Exit, carrying the BOTTOM HALF of DK) */}
+          <motion.div
+            key="shutter-bottom"
+            className="absolute bottom-0 inset-x-0 h-1/2 overflow-hidden bg-[#090909] border-t border-primary/40 z-20"
+            initial={{ y: 0 }}
+            exit={{
+              y: "100%",
+              transition: { duration: 0.85, ease: splitEase },
+            }}
+          >
+            {/* Bottom inner container: 200% height anchored to bottom: 0, DK is centered at top edge (50% of screen) */}
+            <div className="absolute bottom-0 inset-x-0 h-[200%] w-full flex items-center justify-center pointer-events-none select-none">
+              <span
+                className="font-display font-bold uppercase leading-none text-white tracking-[-0.04em]"
+                style={{
+                  fontSize: "clamp(100px, 26vw, 220px)",
+                  display: "inline-block",
+                }}
+              >
+                {DIVYANSH_PROFILE.monogram}
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Center Strikethrough Dividing Laser Line Accent across the horizontal equator */}
+          <motion.div
+            key="shutter-center-line"
+            className="absolute top-1/2 inset-x-0 h-[2px] bg-primary z-30 pointer-events-none -translate-y-1/2"
+            initial={{ opacity: 1, scaleX: 1 }}
+            exit={{
+              opacity: 0,
+              scaleX: 0,
+              transition: { duration: 0.25, ease: "easeOut" },
+            }}
+          />
         </motion.div>
       ) : null}
     </AnimatePresence>

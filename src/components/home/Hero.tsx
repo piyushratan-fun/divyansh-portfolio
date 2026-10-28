@@ -26,7 +26,7 @@ import { RevealText } from "@/components/motion/RevealText";
 import { Button } from "@/components/ui/button";
 import { useMobileMotionSafety } from "@/hooks/useMobileMotionSafety";
 
-const heroSilhouette = "/hero-silhouette.png";
+const heroSilhouette = "/hero-silhouette-v2.png";
 
 export function Hero() {
   const { scrollY } = useScroll();
