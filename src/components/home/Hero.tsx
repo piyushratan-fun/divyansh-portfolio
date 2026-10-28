@@ -165,8 +165,8 @@ export function Hero() {
 
         {/* Center-Right Divyansh Silhouette Cutout */}
         <div
-          className="absolute left-[54%] top-[48%] z-10 -translate-x-[30%] -translate-y-[52%] pointer-events-none"
-          style={{ height: "clamp(300px, 76vh, 1200px)", width: "clamp(300px, 76vh, 1200px)" }}
+          className="absolute left-[54%] top-[50%] z-10 -translate-x-[30%] -translate-y-[50%] pointer-events-none"
+          style={{ height: "clamp(240px, 60vh, 850px)", width: "clamp(240px, 60vh, 850px)" }}
         >
           <motion.div
             data-mobile-static-motion="true"
