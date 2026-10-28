@@ -1,0 +1,203 @@
+[debug] [2026-10-28T16:14:06.581Z] ----------------------------------------------------------------------
+[debug] [2026-10-28T16:14:06.584Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\divya\Downloads\Divyansh-Portfolio\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --project divyanshkatiyar --account piyushratanprofessional@gmail.com
+[debug] [2026-10-28T16:14:06.585Z] CLI Version:   15.16.0
+[debug] [2026-10-28T16:14:06.585Z] Platform:      win32
+[debug] [2026-10-28T16:14:06.585Z] Node Version:  v26.7.0
+[debug] [2026-10-28T16:14:06.585Z] Time:          Wed Oct 28 2026 21:44:06 GMT+0530 (India Standard Time)
+[debug] [2026-10-28T16:14:06.586Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-28T16:14:44.181Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-28T16:14:44.181Z] > authorizing via signed-in user (piyushratanprofessional@gmail.com)
+[debug] [2026-10-28T16:14:44.182Z] [iam] checking project divyanshkatiyar for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-10-28T16:14:44.185Z] No OAuth tokens found
+[debug] [2026-10-28T16:14:44.186Z] No OAuth tokens found
+[debug] [2026-10-28T16:14:44.187Z] > refreshing access token with scopes: []
+[debug] [2026-10-28T16:14:44.189Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-10-28T16:14:44.189Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-10-28T16:14:44.450Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-10-28T16:14:44.451Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-10-28T16:14:44.464Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/divyanshkatiyar:testIamPermissions [none]
+[debug] [2026-10-28T16:14:44.464Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/divyanshkatiyar:testIamPermissions  x-goog-user-project=divyanshkatiyar
+[debug] [2026-10-28T16:14:44.464Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/divyanshkatiyar:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-10-28T16:14:45.999Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/divyanshkatiyar:testIamPermissions 200
+[debug] [2026-10-28T16:14:45.999Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/divyanshkatiyar:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-10-28T16:14:46.000Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:46.000Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:46.000Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/divyanshkatiyar [none]
+[debug] [2026-10-28T16:14:46.828Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/divyanshkatiyar 200
+[debug] [2026-10-28T16:14:46.828Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/divyanshkatiyar {"projectId":"divyanshkatiyar","projectNumber":"922134476163","displayName":"Divyansh Katiyar","name":"projects/divyanshkatiyar","resources":{"hostingSite":"divyanshkatiyar"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_667f18aa-ea9b-435d-9937-a9c859f55561"}
+[info] 
+[info] === Deploying to 'divyanshkatiyar'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-10-28T16:14:46.831Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:46.832Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:46.832Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/divyanshkatiyar/sites/divyanshkatiyar [none]
+[debug] [2026-10-28T16:14:48.259Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/divyanshkatiyar/sites/divyanshkatiyar 200
+[debug] [2026-10-28T16:14:48.259Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/divyanshkatiyar/sites/divyanshkatiyar {"name":"projects/divyanshkatiyar/sites/divyanshkatiyar","defaultUrl":"https://divyanshkatiyar.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-10-28T16:14:48.268Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:48.268Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:48.269Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions [none]
+[debug] [2026-10-28T16:14:48.269Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-10-28T16:14:49.449Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions 200
+[debug] [2026-10-28T16:14:49.449Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions {"name":"projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[divyanshkatiyar]: beginning deploy... 
+[info] i  hosting[divyanshkatiyar]: found 38 files in out 
+[debug] [2026-10-28T16:14:49.475Z] [hosting] uploading with 200 concurrency
+[debug] [2026-10-28T16:14:49.963Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:49.964Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:49.965Z] [hosting] hash cache [b3V0] stored for 38 files
+[debug] [2026-10-28T16:14:49.965Z] [hosting][hash queue][FINAL] {"max":466,"min":5,"avg":68.05263157894737,"active":0,"complete":38,"success":38,"errored":0,"retried":0,"total":38,"elapsed":477}
+[debug] [2026-10-28T16:14:49.965Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b:populateFiles [none]
+[debug] [2026-10-28T16:14:49.965Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b:populateFiles {"files":{"/logo.svg":"1e640bd1d577c6e36ad266a1422d508fae4bf013475d974e33d47ad3eef9bc3c","/logo-mark.svg":"f6fd925c23d34767950428ee859d6361689155fc1d8854ab13fda7f48761c587","/favicon.svg":"9c65b3b8fcae03e797a0813e68c7bfcf56cfb04fa5c400243b8138caa4cce026","/__next._tree.txt":"cfdf53d5d8c9224fe83661308dedfe784bc6175a452e898493ed6f1aa0d1203c","/__next._index.txt":"5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9","/__next.__PAGE__.txt":"4b836f5201e2ffc617eab42bf54a2de3be241a351d81d9419a42f269eb0e6791","/__next._head.txt":"abc92e64f9b47a506f91d17a86b6051aed59b3a5774da2b9210587a6d1795781","/__next._full.txt":"1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d","/_not-found.html":"6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3","/_not-found.txt":"c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef","/robots.txt":"88531a3003e169677aaee5a351f9371cf567cec3688d4328859a4722330676f7","/sitemap.xml":"5f3f01c46e37dfa5b9a78b930f67206dd114e2c1a8e444398f77b35c2c69defb","/index.txt":"1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d","/_not-found/__next._tree.txt":"63fe0e3f0bd76793f1d4782e871ddd72a16a4a52f005e1fbc58b617e6563769f","/hero-silhouette-simple.png":"0b934c7a8efd2f823c61e9f6317b5f35b00665f01e86a3cf5be5593574a42ad8","/_not-found/__next._index.txt":"5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9","/404.html":"6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3","/_not-found/__next._not-found.txt":"dcab76df858e4b40a00249a235728d729b3573ec8d18bce9ad29924bca463594","/_next/static/chunks/turbopack-17p1zpv_3-0e2.js":"a34a426c92f1409306eb53b10b61df834b25d103090f3ffe1a8cd35130204c35","/_next/static/chunks/11kjahy2ntf0n.js":"b970d53d6f384aaab8f6826b4b94fb9cb0d138e57968a8dffa7365d65e254813","/_not-found/__next._full.txt":"c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef","/_next/static/chunks/0dgq26a5_oy.a.js":"dc8ffd6e740bf9c090ed06fcb1bcda87bb548c98cbb3ea008e1a83772f521830","/_next/static/chunks/0d3shmwh5_nmn.js":"0c1d636e6085992b3d74f44688c20861c3644b89675b31cbc95a5dea5de4e1b8","/_not-found/__next._head.txt":"83491a1ef94134d82f7c5a30286316f2023ce6658b7fbf6deb6bba3b73022c8b","/_next/static/chunks/01xlw8hd842-c.js":"713a16172228e978ae302281c6866c5f8020fafd75b833b2184962f8bb8d2123","/_not-found/__next._not-found/__PAGE__.txt":"431547175ebb84f78674cb47d6e696b2436ee54b31563adc0ff869c7f3f71e4a","/_next/static/a6BZ1Oy4LUNKQ6C0Dbkh-/_buildManifest.js":"dcbe1c9b9159ca21caea98e1bad364012ae284e9551375ca62b83d2811efac91","/_next/static/a6BZ1Oy4LUNKQ6C0Dbkh-/_clientMiddlewareManifest.js":"5e57f6166b702492ab9551af57e4546546c184673a4c0432f73b96f62820f7eb","/_next/static/chunks/06g_l~wz1mk09.css":"2f6870f703e9a995d882baf7463d04534d25d5f531e47b3669cb8e98421a31a2","/index.html":"9c4d5cef1bd98cf490d1a4d5a1d273134574f7bc1a8197b559b3fb7f7527daee","/_next/static/chunks/05lc71p.-k7~7.js":"c0c7f1db9ff29439bc98f1eb8d79684b95429fd701690946d5b7b205b5808e00","/_next/static/chunks/0advs8kqjeo1i.js":"a069e847d5f360d8025cd66b642bcc9d0cc26a9158efb65a93e6dcfad908ac21","/_next/static/a6BZ1Oy4LUNKQ6C0Dbkh-/_ssgManifest.js":"dc28a4dc92fe352ed5d2201bd3972ce47691bc8e89e0400a68d1541d0567c6d5","/_next/static/chunks/0qxe~u8ji54jx.js":"ec2e28209eb718584610b4465e0c036eb121100b4a7544ac6cff27879ba8a7dc","/_next/static/chunks/03gg5vnhjw00g.js":"0870ec6edb206377d36b28319c591b6b0690fd8f17c12f13bb9964d8ddc197f3","/_next/static/chunks/07lhk_q6pmm3r.js":"b0cf520621ac168b6376c934bd3f25877fe236390f74aefe1445dce84962b3df","/hero-silhouette.png":"906f75dea3b3c6e78a235d387a2af5052aa268f6ac880a126b2e6c325326691d","/_next/static/chunks/03~yq9q893hmn.js":"18e28d3214eda45048d80d3925ea7627b809e69ad2e95f7f98459e9146a61c3d"}}
+[debug] [2026-10-28T16:14:50.911Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b:populateFiles 200
+[debug] [2026-10-28T16:14:50.911Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b:populateFiles {"uploadRequiredHashes":["cfdf53d5d8c9224fe83661308dedfe784bc6175a452e898493ed6f1aa0d1203c","6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3","906f75dea3b3c6e78a235d387a2af5052aa268f6ac880a126b2e6c325326691d","9c4d5cef1bd98cf490d1a4d5a1d273134574f7bc1a8197b559b3fb7f7527daee","431547175ebb84f78674cb47d6e696b2436ee54b31563adc0ff869c7f3f71e4a","4b836f5201e2ffc617eab42bf54a2de3be241a351d81d9419a42f269eb0e6791","5f3f01c46e37dfa5b9a78b930f67206dd114e2c1a8e444398f77b35c2c69defb","63fe0e3f0bd76793f1d4782e871ddd72a16a4a52f005e1fbc58b617e6563769f","5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9","1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d","c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef","abc92e64f9b47a506f91d17a86b6051aed59b3a5774da2b9210587a6d1795781","dcab76df858e4b40a00249a235728d729b3573ec8d18bce9ad29924bca463594","83491a1ef94134d82f7c5a30286316f2023ce6658b7fbf6deb6bba3b73022c8b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files"}
+[debug] [2026-10-28T16:14:50.911Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.911Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.912Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:50.913Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/cfdf53d5d8c9224fe83661308dedfe784bc6175a452e898493ed6f1aa0d1203c [none]
+[debug] [2026-10-28T16:14:50.914Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/cfdf53d5d8c9224fe83661308dedfe784bc6175a452e898493ed6f1aa0d1203c [stream]
+[debug] [2026-10-28T16:14:50.915Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3 [none]
+[debug] [2026-10-28T16:14:50.915Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3 [stream]
+[debug] [2026-10-28T16:14:50.916Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/906f75dea3b3c6e78a235d387a2af5052aa268f6ac880a126b2e6c325326691d [none]
+[debug] [2026-10-28T16:14:50.916Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/906f75dea3b3c6e78a235d387a2af5052aa268f6ac880a126b2e6c325326691d [stream]
+[debug] [2026-10-28T16:14:50.921Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/9c4d5cef1bd98cf490d1a4d5a1d273134574f7bc1a8197b559b3fb7f7527daee [none]
+[debug] [2026-10-28T16:14:50.921Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/9c4d5cef1bd98cf490d1a4d5a1d273134574f7bc1a8197b559b3fb7f7527daee [stream]
+[debug] [2026-10-28T16:14:50.922Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/431547175ebb84f78674cb47d6e696b2436ee54b31563adc0ff869c7f3f71e4a [none]
+[debug] [2026-10-28T16:14:50.922Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/431547175ebb84f78674cb47d6e696b2436ee54b31563adc0ff869c7f3f71e4a [stream]
+[debug] [2026-10-28T16:14:50.923Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/4b836f5201e2ffc617eab42bf54a2de3be241a351d81d9419a42f269eb0e6791 [none]
+[debug] [2026-10-28T16:14:50.923Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/4b836f5201e2ffc617eab42bf54a2de3be241a351d81d9419a42f269eb0e6791 [stream]
+[debug] [2026-10-28T16:14:50.924Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5f3f01c46e37dfa5b9a78b930f67206dd114e2c1a8e444398f77b35c2c69defb [none]
+[debug] [2026-10-28T16:14:50.924Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5f3f01c46e37dfa5b9a78b930f67206dd114e2c1a8e444398f77b35c2c69defb [stream]
+[debug] [2026-10-28T16:14:50.925Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/63fe0e3f0bd76793f1d4782e871ddd72a16a4a52f005e1fbc58b617e6563769f [none]
+[debug] [2026-10-28T16:14:50.925Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/63fe0e3f0bd76793f1d4782e871ddd72a16a4a52f005e1fbc58b617e6563769f [stream]
+[debug] [2026-10-28T16:14:50.926Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9 [none]
+[debug] [2026-10-28T16:14:50.927Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9 [stream]
+[debug] [2026-10-28T16:14:50.928Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d [none]
+[debug] [2026-10-28T16:14:50.928Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d [stream]
+[debug] [2026-10-28T16:14:50.929Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef [none]
+[debug] [2026-10-28T16:14:50.929Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef [stream]
+[debug] [2026-10-28T16:14:50.930Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/abc92e64f9b47a506f91d17a86b6051aed59b3a5774da2b9210587a6d1795781 [none]
+[debug] [2026-10-28T16:14:50.930Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/abc92e64f9b47a506f91d17a86b6051aed59b3a5774da2b9210587a6d1795781 [stream]
+[debug] [2026-10-28T16:14:50.931Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/dcab76df858e4b40a00249a235728d729b3573ec8d18bce9ad29924bca463594 [none]
+[debug] [2026-10-28T16:14:50.931Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/dcab76df858e4b40a00249a235728d729b3573ec8d18bce9ad29924bca463594 [stream]
+[debug] [2026-10-28T16:14:50.932Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/83491a1ef94134d82f7c5a30286316f2023ce6658b7fbf6deb6bba3b73022c8b [none]
+[debug] [2026-10-28T16:14:50.932Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/83491a1ef94134d82f7c5a30286316f2023ce6658b7fbf6deb6bba3b73022c8b [stream]
+[debug] [2026-10-28T16:14:50.933Z] [hosting][populate queue][FINAL] {"max":950,"min":950,"avg":950,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":970}
+[debug] [2026-10-28T16:14:50.933Z] [hosting] uploads queued: 14
+[info] i  hosting: uploading new files [0/14] (0%) 
+[debug] [2026-10-28T16:14:53.073Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/9c4d5cef1bd98cf490d1a4d5a1d273134574f7bc1a8197b559b3fb7f7527daee 200
+[debug] [2026-10-28T16:14:53.073Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/9c4d5cef1bd98cf490d1a4d5a1d273134574f7bc1a8197b559b3fb7f7527daee [stream]
+[debug] [2026-10-28T16:14:53.220Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9 200
+[debug] [2026-10-28T16:14:53.221Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5863aa382cd2f33f1cd8d9d4c1317c22035beaebe6e91fce09e9a6db559edeb9 [stream]
+[debug] [2026-10-28T16:14:53.221Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/63fe0e3f0bd76793f1d4782e871ddd72a16a4a52f005e1fbc58b617e6563769f 200
+[debug] [2026-10-28T16:14:53.222Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/63fe0e3f0bd76793f1d4782e871ddd72a16a4a52f005e1fbc58b617e6563769f [stream]
+[debug] [2026-10-28T16:14:53.222Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d 200
+[debug] [2026-10-28T16:14:53.222Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/1a814e6d09a131a5fb04a94cb14f3d56be43813f6af5b0a5d3da65ae54ad9f8d [stream]
+[debug] [2026-10-28T16:14:53.223Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/dcab76df858e4b40a00249a235728d729b3573ec8d18bce9ad29924bca463594 200
+[debug] [2026-10-28T16:14:53.223Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/dcab76df858e4b40a00249a235728d729b3573ec8d18bce9ad29924bca463594 [stream]
+[debug] [2026-10-28T16:14:53.230Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/83491a1ef94134d82f7c5a30286316f2023ce6658b7fbf6deb6bba3b73022c8b 200
+[debug] [2026-10-28T16:14:53.230Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/83491a1ef94134d82f7c5a30286316f2023ce6658b7fbf6deb6bba3b73022c8b [stream]
+[debug] [2026-10-28T16:14:53.258Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/431547175ebb84f78674cb47d6e696b2436ee54b31563adc0ff869c7f3f71e4a 200
+[debug] [2026-10-28T16:14:53.258Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/431547175ebb84f78674cb47d6e696b2436ee54b31563adc0ff869c7f3f71e4a [stream]
+[debug] [2026-10-28T16:14:53.392Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5f3f01c46e37dfa5b9a78b930f67206dd114e2c1a8e444398f77b35c2c69defb 200
+[debug] [2026-10-28T16:14:53.392Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/5f3f01c46e37dfa5b9a78b930f67206dd114e2c1a8e444398f77b35c2c69defb [stream]
+[debug] [2026-10-28T16:14:53.393Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/cfdf53d5d8c9224fe83661308dedfe784bc6175a452e898493ed6f1aa0d1203c 200
+[debug] [2026-10-28T16:14:53.393Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/cfdf53d5d8c9224fe83661308dedfe784bc6175a452e898493ed6f1aa0d1203c [stream]
+[debug] [2026-10-28T16:14:53.394Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3 200
+[debug] [2026-10-28T16:14:53.394Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/6fe335ea0c18bcac457423f61e5c0d6c5cb38c352d5e7b5bd9cf7d8eefbfc9f3 [stream]
+[debug] [2026-10-28T16:14:53.395Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/abc92e64f9b47a506f91d17a86b6051aed59b3a5774da2b9210587a6d1795781 200
+[debug] [2026-10-28T16:14:53.395Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/abc92e64f9b47a506f91d17a86b6051aed59b3a5774da2b9210587a6d1795781 [stream]
+[info] i  hosting: uploading new files [11/14] (78%) 
+[debug] [2026-10-28T16:14:53.545Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef 200
+[debug] [2026-10-28T16:14:53.546Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/c21a9b18e855fc468d5b9b85a6d2badcde9200aee38d02b9e9168b825f0d1fef [stream]
+[debug] [2026-10-28T16:14:53.728Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/4b836f5201e2ffc617eab42bf54a2de3be241a351d81d9419a42f269eb0e6791 200
+[debug] [2026-10-28T16:14:53.728Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/4b836f5201e2ffc617eab42bf54a2de3be241a351d81d9419a42f269eb0e6791 [stream]
+[info] i  hosting: uploading new files [13/14] (92%) 
+[debug] [2026-10-28T16:14:56.168Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/906f75dea3b3c6e78a235d387a2af5052aa268f6ac880a126b2e6c325326691d 200
+[debug] [2026-10-28T16:14:56.168Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b/files/906f75dea3b3c6e78a235d387a2af5052aa268f6ac880a126b2e6c325326691d [stream]
+[debug] [2026-10-28T16:14:56.168Z] [hosting][upload queue][FINAL] {"max":5256,"min":2161,"avg":2620.9285714285716,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":5257}
+[info] i  hosting: upload complete 
+[info] +  hosting[divyanshkatiyar]: file upload complete 
+[debug] [2026-10-28T16:14:56.169Z] [hosting] deploy completed after 6717ms
+[debug] [2026-10-28T16:14:56.170Z] [
+  {
+    "config": {
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "headers": [
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000, immutable"
+            }
+          ]
+        }
+      ],
+      "site": "divyanshkatiyar"
+    },
+    "version": "projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b"
+  }
+]
+[info] i  hosting[divyanshkatiyar]: finalizing version... 
+[debug] [2026-10-28T16:14:56.173Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:56.173Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:56.173Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b updateMask=status%2Cconfig
+[debug] [2026-10-28T16:14:56.174Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b {"status":"FINALIZED","config":{"headers":[{"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css)","headers":{"Cache-Control":"max-age=31536000, immutable"}}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"}}
+[debug] [2026-10-28T16:14:57.610Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b 200
+[debug] [2026-10-28T16:14:57.611Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b {"name":"projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"max-age=31536000, immutable"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css)"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-10-28T16:14:52.287027Z","createUser":{"email":"piyushratanprofessional@gmail.com"},"finalizeTime":"2026-10-28T16:15:00.960024Z","finalizeUser":{"email":"piyushratanprofessional@gmail.com"}}
+[debug] [2026-10-28T16:14:57.611Z] [hosting] finalized version for divyanshkatiyar:[object Object]
+[info] +  hosting[divyanshkatiyar]: version finalized 
+[info] i  hosting[divyanshkatiyar]: releasing new version... 
+[debug] [2026-10-28T16:14:57.612Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:57.612Z] Checked if tokens are valid: true, expires at: 1793207683451
+[debug] [2026-10-28T16:14:57.612Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/channels/live/releases versionName=projects%2F922134476163%2Fsites%2Fdivyanshkatiyar%2Fversions%2Fa71d71d3a0e55a5b
+[debug] [2026-10-28T16:14:57.612Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/channels/live/releases {}
+[debug] [2026-10-28T16:14:58.690Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/channels/live/releases 200
+[debug] [2026-10-28T16:14:58.690Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/divyanshkatiyar/channels/live/releases {"name":"projects/922134476163/sites/divyanshkatiyar/channels/live/releases/1793204101399000","version":{"name":"projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"max-age=31536000, immutable"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css)"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-10-28T16:14:52.287027Z","createUser":{"email":"piyushratanprofessional@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1y-VGqWI1eif8_DYV7Car0BmB3QQ1-Oa1MAD754xptxaMrg=mo"},"finalizeTime":"2026-10-28T16:15:00.960024Z","finalizeUser":{"email":"piyushratanprofessional@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1y-VGqWI1eif8_DYV7Car0BmB3QQ1-Oa1MAD754xptxaMrg=mo"}},"type":"DEPLOY","releaseTime":"2026-10-28T16:15:01.399Z","releaseUser":{"email":"piyushratanprofessional@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1y-VGqWI1eif8_DYV7Car0BmB3QQ1-Oa1MAD754xptxaMrg=mo"}}
+[debug] [2026-10-28T16:14:58.690Z] [hosting] release: {"name":"projects/922134476163/sites/divyanshkatiyar/channels/live/releases/1793204101399000","version":{"name":"projects/922134476163/sites/divyanshkatiyar/versions/a71d71d3a0e55a5b","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"max-age=31536000, immutable"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css)"}],"cleanUrls":true,"trailingSlashBehavior":"REMOVE"},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-10-28T16:14:52.287027Z","createUser":{"email":"piyushratanprofessional@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1y-VGqWI1eif8_DYV7Car0BmB3QQ1-Oa1MAD754xptxaMrg=mo"},"finalizeTime":"2026-10-28T16:15:00.960024Z","finalizeUser":{"email":"piyushratanprofessional@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1y-VGqWI1eif8_DYV7Car0BmB3QQ1-Oa1MAD754xptxaMrg=mo"}},"type":"DEPLOY","releaseTime":"2026-10-28T16:15:01.399Z","releaseUser":{"email":"piyushratanprofessional@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJ1y-VGqWI1eif8_DYV7Car0BmB3QQ1-Oa1MAD754xptxaMrg=mo"}}
+[info] +  hosting[divyanshkatiyar]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/divyanshkatiyar/overview
+[info] Hosting URL: https://divyanshkatiyar.web.app
+[debug] [2026-10-28T16:15:05.255Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\divya\Downloads\Divyansh-Portfolio\node_modules\firebase-tools\lib\utils.js:309:49)
+    at listOnTimeout (node:internal/timers:685:17)
+    at process.processTimers (node:internal/timers:618:7)
+[error] 
+[error] Error: An unexpected error has occurred.
